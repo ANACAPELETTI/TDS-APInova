@@ -4,7 +4,7 @@ import { CreateUserUseCase } from "./CreateUserUseCase";
 
 class CreateUserController {
     async handle(request: Request, response: Response){
-        const {RA,nome, ativa, email, senha, telefone, idCargo} = request.body;
+        const {RA,nome, ativa, email, senha, telefone, idCargo, imagemCaminho, descricao} = request.body;
 
         const createUserUseCase = new CreateUserUseCase();
 
@@ -16,7 +16,9 @@ class CreateUserController {
                 RA: RA,
                 senha: senha,
                 telefone: telefone,
-                idCargo: idCargo
+                idCargo: idCargo,
+                imagemCaminho: imagemCaminho,
+                descricao: descricao
             });
 
             return response.json(novoUsuario);//Se der bom, retorna o usuário que foi cadastrado

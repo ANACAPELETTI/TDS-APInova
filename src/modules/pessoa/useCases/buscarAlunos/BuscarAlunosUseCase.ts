@@ -1,25 +1,14 @@
 import { client } from "../../../../model/prisma/client";
 
-class BuscarOrientadoresUseCase {
+class BuscarAlunosUseCase {
     async execute(){
         return await client.usuario.findMany({
             where:{
-                OR:[
-                    {
-                        usuarioCargo:{
-                            every:{
-                                id_cargo: '2'
-                            }
-                        }
-                    },
-                    {
-                        usuarioCargo:{
-                            every:{
-                                id_cargo: '3'
-                            }
-                        }
+                usuarioCargo:{
+                    every:{
+                        id_cargo: '1'
                     }
-                ]
+                }
             },
             select:{
                 id:true,
@@ -51,4 +40,4 @@ class BuscarOrientadoresUseCase {
     }   
 }
 
-export { BuscarOrientadoresUseCase };
+export { BuscarAlunosUseCase };

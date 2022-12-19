@@ -8,6 +8,9 @@ import { AuthenticateUserController } from "../modules/user/useCases/authenticat
 import { CreateUserController } from "../modules/user/useCases/createUser/CreateUserController";
 import { GetUserController } from "../modules/user/useCases/getUser/GetUserController";
 import { RefreshTokenUserController } from "../modules/user/useCases/refreshTokenUser/RefreshTokenUserController";
+import { RemoverOrientadorController } from "../modules/pessoa/useCases/removerOrientador/RemoverOrientadorController";
+import { BuscarAlunosController } from "../modules/pessoa/useCases/buscarAlunos/BuscarAlunosController";
+import { RemoverTrabalhoController } from "../modules/trabalho/useCases/removerTrabalho/RemoverTrabalhoController";
 
 var express = require('express');
 var router = express.Router();
@@ -51,5 +54,17 @@ router.get('/trabalho', ensureAuthenticated, buscarTrabalhosControler.handle);
 //Buscar orientadores
 const buscarOrientadoresController : BuscarOrientadoresController = new BuscarOrientadoresController();
 router.get('/orientadores', buscarOrientadoresController.handle);
+
+//Buscar Alunos
+const buscarAlunosController : BuscarAlunosController = new BuscarAlunosController();
+router.get('/alunos', buscarAlunosController.handle);
+
+//Remover orientador
+const removerOrientadorController : RemoverOrientadorController = new RemoverOrientadorController();
+router.delete('/orientador:idOrientador', removerOrientadorController.handle);
+
+//Remover trabalho
+const removerTrabalhoController : RemoverTrabalhoController = new RemoverTrabalhoController();
+router.delete('/trabalho:idTrabalho', removerTrabalhoController.handle);
 
 export { router };

@@ -1,0 +1,67 @@
+
+   {
+     "nome": "Thiago França Naves",
+     "imagemCaminho": "thiagoFoto.jpeg",
+     "descricao": "Suas áreas de interesse incluem: agentes inteligentes, planejamento em tempo real, robótica e simulações, realidade virtual e desenvolvimento de jogos digitais com foco na aplicação de inteligência artificial.",
+     "email": "naves@utfpr.edu.br",
+     "telefone": "(45) 3865-9481",
+     "RA":"1",
+     "senha":"12345",
+     "ativa":true,
+     "idCargo":"2"
+   },
+   {
+     "nome": "Giuvane Conti",
+     "imagemCaminho": "giuvane.png",
+     "descricao": "Doutorando no programa de pós graduação em Engenharia Agrícola pela Universidade do Oeste do Paraná - Unioeste. Áreas de interesse: Desenvolvimento para dispositivos móveis e Jogos.",
+     "email": "giuvaneconti@utfpr.edu.br",
+     "telefone": "(45) 2537-1619",
+     "RA":"2",
+     "senha":"12345",
+     "ativa":true,
+     "idCargo":"2"
+   },
+   {
+     "nome": "Euclides Peres Farias Junior",
+     "imagemCaminho": "euclides.png",
+     "descricao": "Suas áreas de interesse incluem: segurança computacional, redes definidas por software (SDN), redes de computadores, sistemas operacionais (Unix e Linux), mineração de dados e inteligência artificial.",
+     "email": "euclidesjunior@utfpr.edu.br",
+     "telefone": "(45) 2665-9510",
+     "RA":"3",
+     "senha":"12345",
+     "ativa":true,
+     "idCargo":"2"
+   },
+   {
+     "nome": "Angaldo da Costa",
+     "imagemCaminho": "agnaldo.png",
+     "descricao": "Doutor em Ensino de Ciências e Tecnologia (UTFPR-PR), Mestrado em Computação Aplicadas (Univali). Suas áreas de interesse incluem: Sistemas Operacionais, Mineração de Dados e Informática Educacional.",
+     "email": "agnaldocosta@utfpr.edu.br",
+     "telefone": "(45) 2163-5643",
+     "RA":"3",
+     "senha":"12345",
+     "ativa":true,
+     "idCargo":"2"
+   },
+   {
+     "nome": "Davi Marcondes Rocha",
+     "imagemCaminho": "davi.png",
+     "descricao": "Doutorado em Engenharia Agrícola na Universidade Estadual do Oeste do Paraná. Suas áreas de interesse incluem: Análise/Processamento Digital de Imagens, Computação Gráfica, Geoprocessamento e Engenharia de Software.",
+     "email": "davirocha@utfpr.edu.br",
+     "telefone": "(45) 2771-2281",
+     "RA":"4",
+     "senha":"12345",
+     "ativa":true,
+     "idCargo":"2"
+   },
+   {
+     "nome": "Vera Lucia Vasilevski dos Santos Araujo",
+     "imagemCaminho": "vera.png",
+     "descricao": "Suas áreas de interesse incluem: Neurociência na aprendizagem, Aquisição da linguagem, Leitura e produção textual, Linguística computacional (desenvolvimento de softwares para PLN - fonologia, morfologia e Leitura).",
+     "email": "vera.2015@alunos.utfpr.edu.br",
+     "telefone": "(45) 3651-8824",
+     "RA":"5",
+     "senha":"12345",
+     "ativa":true,
+     "idCargo":"2"
+   }

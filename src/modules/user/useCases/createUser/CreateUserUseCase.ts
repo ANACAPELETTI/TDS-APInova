@@ -10,10 +10,12 @@ interface ICriarUsuarioRequest {
     senha: string,
     telefone: string,
     idCargo: string,
+    imagemCaminho: string,
+    descricao: string
 }
 
 class CreateUserUseCase {
-    async execute({RA, nome, ativa, email, senha, telefone, idCargo}: ICriarUsuarioRequest){
+    async execute({RA, nome, ativa, email, senha, telefone, idCargo, imagemCaminho, descricao}: ICriarUsuarioRequest){
 
         //Verificar se usuário existe
         const usuarioJaExiste = await client.usuario.findFirst({
@@ -39,6 +41,8 @@ class CreateUserUseCase {
                         nome: nome,
                         ativo: true,
                         pontuacao: 0,
+                        imagemCaminho: imagemCaminho,
+                        descricao: descricao,
                         telefone: {
                             create:{
                                 numero: telefone,

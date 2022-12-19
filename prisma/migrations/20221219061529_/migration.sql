@@ -22,6 +22,7 @@ CREATE TABLE `Pessoa` (
     `nome` VARCHAR(191) NOT NULL,
     `ativo` BOOLEAN NOT NULL,
     `pontuacao` INTEGER NOT NULL,
+    `descricao` VARCHAR(500) NULL,
     `imagemCaminho` VARCHAR(191) NULL,
 
     PRIMARY KEY (`id`)

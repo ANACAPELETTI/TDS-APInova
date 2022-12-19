@@ -14,7 +14,7 @@ class RemoverOrientadorController {
             return response.json(orientadores);       
         } catch (error) {
             return response.json({
-                status: "Erro ao remover orientador",
+                status: "Erro ao remover orientador "+error,
                 message: error
             });
         }

@@ -13,17 +13,16 @@ datasource db {
 
 //Tabelas abaixo
 
-
 model Telefone {
-  id String @id @default(uuid())
-  numero String
+  id        String @id @default(uuid())
+  numero    String
   id_pessoa String
-  pessoa Pessoa @relation(fields: [id_pessoa], references: [id])
+  pessoa    Pessoa @relation(fields: [id_pessoa], references: [id])
 }
 
 model Trabalho {
-  id String @id @default(uuid())
-  tema String
+  id        String  @id @default(uuid())
+  tema      String
   descricao String?
 
   trabalhoPessoa TrabalhoPessoa[]
@@ -32,58 +31,56 @@ model Trabalho {
 }
 
 model Pessoa {
-  id String @id @default(uuid())
-  nome String
-  ativo Boolean
-  pontuacao Int
+  id            String     @id @default(uuid())
+  nome          String
+  ativo         Boolean
+  pontuacao     Int
+  descricao     String?    @db.VarChar(500)
   imagemCaminho String?
-  telefone Telefone[]
-  usuario Usuario[]
+  telefone      Telefone[]
+  usuario       Usuario[]
 
   OrientadorTrabalho TrabalhoPessoa[] @relation("OrientadorTrabalho")
-  AlunoTrabalho TrabalhoPessoa[] @relation("AlunoTrabalho")
-  Coorientador TrabalhoPessoa[] @relation("CoorientadorTrabalho")
-  
+  AlunoTrabalho      TrabalhoPessoa[] @relation("AlunoTrabalho")
+  Coorientador       TrabalhoPessoa[] @relation("CoorientadorTrabalho")
 }
 
 model TrabalhoPessoa {
   id String @id @default(uuid())
 
   id_trabalhoOrientador String
-  trabalhoOrientador Pessoa @relation("OrientadorTrabalho",fields: [id_trabalhoOrientador], references: [id])
+  trabalhoOrientador    Pessoa @relation("OrientadorTrabalho", fields: [id_trabalhoOrientador], references: [id])
 
   id_trabalhoAluno String
-  trabalhoAluno Pessoa @relation("AlunoTrabalho",fields: [id_trabalhoAluno], references: [id])
+  trabalhoAluno    Pessoa @relation("AlunoTrabalho", fields: [id_trabalhoAluno], references: [id])
 
   id_trabalhoCoorientador String?
-  trabalhoCoorientador Pessoa? @relation("CoorientadorTrabalho",fields: [id_trabalhoCoorientador], references: [id])
+  trabalhoCoorientador    Pessoa? @relation("CoorientadorTrabalho", fields: [id_trabalhoCoorientador], references: [id])
 
   id_trabalho String
-  trabalho Trabalho @relation(fields: [id_trabalho], references: [id])
-
+  trabalho    Trabalho @relation(fields: [id_trabalho], references: [id])
 }
 
 model Usuario {
-  id String @id @default(uuid())
-  RA String
-  email String
-  senha String
-  id_pessoa String
-  pessoa Pessoa @relation(fields: [id_pessoa], references: [id])
-  usuarioCargo UsuarioCargo[]
+  id            String         @id @default(uuid())
+  RA            String
+  email         String
+  senha         String
+  id_pessoa     String
+  pessoa        Pessoa         @relation(fields: [id_pessoa], references: [id])
+  usuarioCargo  UsuarioCargo[]
   refresh_token RefreshToken?
 }
 
-
 model Permissao {
-  id String @id @default(uuid())
+  id        String @id @default(uuid())
   descricao String
 
   cargoPermissao CargoPermissao[]
 }
 
-model Cargo{
-  id String @id @default(uuid())
+model Cargo {
+  id   String @id @default(uuid())
   nome String
 
   usuarioCargo UsuarioCargo[]
@@ -92,30 +89,30 @@ model Cargo{
 }
 
 model UsuarioCargo {
-  id String @id @default(uuid())
+  id         String  @id @default(uuid())
   id_usuario String
-  usuario Usuario @relation(fields: [id_usuario], references: [id])
-  id_cargo String
-  cargo Cargo @relation(fields: [id_cargo], references: [id])
+  usuario    Usuario @relation(fields: [id_usuario], references: [id])
+  id_cargo   String
+  cargo      Cargo   @relation(fields: [id_cargo], references: [id])
 
   @@map("usuario_cargo")
 }
 
 model CargoPermissao {
-  id String @id @default(uuid())
-  id_cargo String
-  cargo Cargo @relation(fields: [id_cargo], references: [id])
+  id           String    @id @default(uuid())
+  id_cargo     String
+  cargo        Cargo     @relation(fields: [id_cargo], references: [id])
   id_permissao String
-  permissao Permissao @relation(fields: [id_permissao], references: [id])
+  permissao    Permissao @relation(fields: [id_permissao], references: [id])
 
   @@map("cargo_permissao")
 }
 
 model RefreshToken {
-  id String @id @default(uuid())
+  id               String  @id @default(uuid())
   tempoDeExpiracao Int
-  id_usuario String @unique
-  usuario Usuario @relation(fields: [id_usuario], references: [id])
+  id_usuario       String  @unique
+  usuario          Usuario @relation(fields: [id_usuario], references: [id])
 
   @@map("refresh_token")
 }
