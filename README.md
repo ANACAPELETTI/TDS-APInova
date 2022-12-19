@@ -1,5 +1,5 @@
-<h1 align="center">Travican</h1>
-<p align="center">Servidor do projeto para matéria de Técnologia em Desenvovimento de Sistemas</p>
+<h1 align="center">TDSAPI</h1>
+<p align="center">Projeto de Tecnologia em desenvolvimento de sistemas</p>
 
 Tabela de conteúdos
 =================
@@ -7,7 +7,6 @@ Tabela de conteúdos
    * [Sobre](#sobre)
    * [Tecnologias](#tecnologias)
    * [Pre Requisitos](#pré-requisitos)
-   * [Autores](#autores)
 <!--te-->
 
 ### Sobre
@@ -24,7 +23,9 @@ No projeto será aplicado:
 - TypeScript
 - Angular (FrontEnd)
 - Node (BackEnd)
-- MongoDB (Banco de dados)
+- MySQL (Banco de dados)
+- Prima (Biblioteca para ORM)
+- Express (Framework backend)
 
 
 ### Pré-requisitos
@@ -66,21 +67,3 @@ Adicione o ``"dev":"ts-node-dev --respawn src/server.ts"`` na parte ``scripts`` 
 
 Para executar o projeto:
 ``npm dev``
-
-<h2 align="center">Autores</h2>
-
-<table align="center">
-  <tr>
-    <td align="center"><a href="https://github.com/jefersoncmn"><img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/51566081?v=4" width="100px;" alt=""/><br/><sub><b>Jeferson Martin</b></sub></a><br /><a href="https://github.com/jefersoncmn" title="Jeferson Martin"></a>
-    </td>
-</table>
-	
-## Contatos
-
-:mailbox: [jefersoncmn@hotmail.com](jefersoncmn@hotmail.com)
-
-<div align="justify">
-
-[<img alt="LinkedIn" src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"/>](https://www.linkedin.com/in/jefcmn/)
-[<img alt="Instagram" src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white"/>](https://www.instagram.com/jefersoncmn/)
-[<img src="https://img.shields.io/badge/-Gmail-%23333?style=for-the-badge&logo=gmail&logoColor=white"/>](mailto:jefersoncmnn@gmail.com)
