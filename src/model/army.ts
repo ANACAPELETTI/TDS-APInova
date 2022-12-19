@@ -1,0 +1,3 @@
+interface IArmy {
+    land: ILand;
+}

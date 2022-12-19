@@ -1,0 +1,12 @@
+Prima ajuda no ORM de dados do banco realcional para intancias
+
+//Instalar
+npm install prisma --save-dev
+
+//Criar as pastinhas
+npx prisma init
+
+//Ir no prisma/schema.prisma e mudar o banco
+
+//Gera a migration e as tabelas no banco
+npx prisma migrate dev

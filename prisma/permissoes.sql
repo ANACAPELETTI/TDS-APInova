@@ -1,0 +1,12 @@
+INSERT INTO permissao (id,descricao) values ('1','ROLE_CADASTRAR_TRABALHO');
+INSERT INTO permissao (id, descricao) values ('2','ROLE_EDITA_TRABALHO');
+INSERT INTO permissao (id,descricao) values ('3','ROLE_REMOVE_TRABALHO');
+INSERT INTO permissao (id,descricao) values ('4','ROLE_PESQUISAR_TRABALHO');
+INSERT INTO permissao (id,descricao) values ('5','ROLE_CADASTRAR_PESSOA');
+INSERT INTO permissao (id,descricao) values ('6','ROLE_EDITA_PESSOA');
+INSERT INTO permissao (id,descricao) values ('7','ROLE_REMOVER_PESSOA');
+INSERT INTO permissao (id,descricao) values ('8','ROLE_PESQUISAR_PESSOA');
+INSERT INTO permissao (id,descricao) values ('9','ROLE_CADASTRAR_USUARIO');
+INSERT INTO permissao (id,descricao) values ('10','ROLE_REMOVER_USUARIO');
+INSERT INTO permissao (id,descricao) values ('11','ROLE_REDEFINE_SENHA');
+INSERT INTO permissao (id,descricao) values ('12','ROLE_PESQUISAR_USUARIO');
