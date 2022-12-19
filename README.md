@@ -12,7 +12,6 @@ Tabela de conteúdos
 ### Sobre
 <div align="center">
 	<p>Em desenvolvimento</p>
-	<p>Esse projeto é um jogo, inspirado no Travian.</p>
 </div>
 
 
